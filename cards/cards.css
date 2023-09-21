@@ -1,5 +1,5 @@
-/*responsive image gallery video: https://www.youtube.com/watch?v=Trw_9lisYVY*/
-
+/* responsive image gallery video :: https://www.youtube.com/watch?v=Trw_9lisYVY*/
+/*  image hover animations :: https://codepen.io/nxworld/pen/ZYNOBZ */
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* zorgt dat de rijen met fotos naast elkaar komen te staan als columns, niet als rows */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -25,7 +25,7 @@ body {
 
 .container.heading h1 {
   font-size: 3em;
-  font-weight: bolder;
+  font-weight: bolder; /* dikker lettertype */
 }
 
 h1 {
@@ -54,6 +54,8 @@ h1 {
   position: relative;
 }
 
+
+/* MEDIA QUERY */
 /* ik heb 4 breakpoints gebruikt. 3 hiervan zijn voor de columns met de profilecards. op een groot scherm begint het met 4 columns, op kleinere schermen wordt het steeds eentje minder.*/
 
 @media only screen and (max-width: 980px) { /* 3 columns naast elkaar */
