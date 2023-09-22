@@ -20,6 +20,9 @@ const links = [
     'https://yujing-student.github.io/your-tribe-profile-card/', //Yu Jing
     'https://samarafelladina.github.io/your-tribe-profile-card/', //Samara
     'https://rileyesther.github.io/your-tribe-profile-card/', //Riley
+    'https://akikosophia.github.io/your-tribe-profile-card/', //Akiko
+    'https://bibekma.github.io/your-tribe-profile-card/visitekaartje2/', //Bibek
+    'https://nadirelm.github.io/your-tribe-profile-card/', //Nadir
     '',
 ];
 
@@ -35,9 +38,16 @@ randomButton.addEventListener('click', getRandomLink);
 
 const body = document.querySelector('body');
 const toggle = document.getElementById('toggle');
+const image = document.getElementById('door');
+// image.src = 'assets/door-nacht.png';
+
 toggle.onclick = function (){
-toggle.classList.toggle('active');
-body.classList.toggle('active');
+    toggle.classList.toggle('active');
+    body.classList.toggle('active');
 
-
+    if(body.classList.contains("active")){ //als de body de class active heeft, dan plaatje van de deur vervangen. bron https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+        image.src = 'assets/door-nacht.png';
+    }else{ //er is geen class active, dan weer het gewone deur plaatje
+        image.src = 'assets/door.png';
+    }
 }
